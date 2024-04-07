@@ -1,0 +1,253 @@
+{
+    "total": 20,
+    "rows": [
+        {
+            "name": "测试任务",
+            "task": "测试任务内容",
+            "type": 1,
+            "origin": 1,
+            "area": {
+                "平湖街道": "区域1",
+                "平湖街道": "区域2"
+            },
+            "reclimit": 0,
+            "coplimit": 0,
+            "target": {
+                "device": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "merchant": []
+            },
+            "needpic": 0,
+            "role_id": 1,
+            "dept_id": 1,
+            "user_id": 1,
+            "verify_id": 1,
+            "aievent_id": 1,
+            "ques_id": 1,
+            "result": "任务反馈结果",
+            "piclist": {
+                "imageList": [
+                    "1.png",
+                    "2.png"
+                ]
+            },
+            "status": 1,
+            "publish_time": "",
+            "receive_time": "",
+            "finish_time": "",
+            "remark": "备注内容",
+            "deleteflag": 0
+        },
+        {
+            "name": "测试任务",
+            "task": "测试任务内容",
+            "type": 1,
+            "origin": 1,
+            "area": {
+                "平湖街道": "区域1",
+                "平湖街道": "区域2"
+            },
+            "reclimit": 0,
+            "coplimit": 0,
+            "target": {
+                "device": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "merchant": []
+            },
+            "needpic": 0,
+            "role_id": 1,
+            "dept_id": 1,
+            "user_id": 1,
+            "verify_id": 1,
+            "aievent_id": 1,
+            "ques_id": 1,
+            "result": "任务反馈结果",
+            "piclist": {
+                "imageList": [
+                    "1.png",
+                    "2.png"
+                ]
+            },
+            "status": 1,
+            "publish_time": "",
+            "receive_time": "",
+            "finish_time": "",
+            "remark": "备注内容",
+            "deleteflag": 0
+        },
+        {
+            "name": "测试任务",
+            "task": "测试任务内容",
+            "type": 1,
+            "origin": 1,
+            "area": {
+                "平湖街道": "区域1",
+                "平湖街道": "区域2"
+            },
+            "reclimit": 0,
+            "coplimit": 0,
+            "target": {
+                "device": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "merchant": []
+            },
+            "needpic": 0,
+            "role_id": 1,
+            "dept_id": 1,
+            "user_id": 1,
+            "verify_id": 1,
+            "aievent_id": 1,
+            "ques_id": 1,
+            "result": "任务反馈结果",
+            "piclist": {
+                "imageList": [
+                    "1.png",
+                    "2.png"
+                ]
+            },
+            "status": 1,
+            "publish_time": "",
+            "receive_time": "",
+            "finish_time": "",
+            "remark": "备注内容",
+            "deleteflag": 0
+        },
+        {
+            "name": "测试任务",
+            "task": "测试任务内容",
+            "type": 1,
+            "origin": 1,
+            "area": {
+                "平湖街道": "区域1",
+                "平湖街道": "区域2"
+            },
+            "reclimit": 0,
+            "coplimit": 0,
+            "target": {
+                "device": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "merchant": []
+            },
+            "needpic": 0,
+            "role_id": 1,
+            "dept_id": 1,
+            "user_id": 1,
+            "verify_id": 1,
+            "aievent_id": 1,
+            "ques_id": 1,
+            "result": "任务反馈结果",
+            "piclist": {
+                "imageList": [
+                    "1.png",
+                    "2.png"
+                ]
+            },
+            "status": 1,
+            "publish_time": "",
+            "receive_time": "",
+            "finish_time": "",
+            "remark": "备注内容",
+            "deleteflag": 0
+        },
+        {
+            "name": "测试任务",
+            "task": "测试任务内容",
+            "type": 1,
+            "origin": 1,
+            "area": {
+                "平湖街道": "区域1",
+                "平湖街道": "区域2"
+            },
+            "reclimit": 0,
+            "coplimit": 0,
+            "target": {
+                "device": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "merchant": []
+            },
+            "needpic": 0,
+            "role_id": 1,
+            "dept_id": 1,
+            "user_id": 1,
+            "verify_id": 1,
+            "aievent_id": 1,
+            "ques_id": 1,
+            "result": "任务反馈结果",
+            "piclist": {
+                "imageList": [
+                    "1.png",
+                    "2.png"
+                ]
+            },
+            "status": 1,
+            "publish_time": "",
+            "receive_time": "",
+            "finish_time": "",
+            "remark": "备注内容",
+            "deleteflag": 0
+        },
+        {
+            "name": "测试任务",
+            "task": "测试任务内容",
+            "type": 1,
+            "origin": 1,
+            "area": {
+                "平湖街道": "区域1",
+                "平湖街道": "区域2"
+            },
+            "reclimit": 0,
+            "coplimit": 0,
+            "target": {
+                "device": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "merchant": []
+            },
+            "needpic": 0,
+            "role_id": 1,
+            "dept_id": 1,
+            "user_id": 1,
+            "verify_id": 1,
+            "aievent_id": 1,
+            "ques_id": 1,
+            "result": "任务反馈结果",
+            "piclist": {
+                "imageList": [
+                    "1.png",
+                    "2.png"
+                ]
+            },
+            "status": 1,
+            "publish_time": "",
+            "receive_time": "",
+            "finish_time": "",
+            "remark": "备注内容",
+            "deleteflag": 0
+        }
+    ],
+    "code": 200,
+    "msg": "查询成功"
+}
