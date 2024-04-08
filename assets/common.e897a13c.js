@@ -1,0 +1,1 @@
+import{aI as e}from"./index.192c8708.js";function a(o,t=!1){return e({url:`/common/uploadFile?updateSupport=${t}`,method:"post",headers:{"Content-Type":"multipart/form-data"},data:o})}function p(o){return e({url:"/common/downloadFile",method:"post",responseType:"blob",headers:{"Content-Type":"application/json"},data:o})}export{p as d,a as u};
