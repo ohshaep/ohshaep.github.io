@@ -1,60 +1,147 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="favicon.ico"><title>资源管理系统</title><script>window._AMapSecurityConfig = {
-                securityJsCode: "7ea15d03847660c2c130953542744639",
-            };</script><script src="https://webapi.amap.com/maps?v=2.0&key=4fecbe0df8f61963ef2f748a92053b23&plugin=AMap.Adaptor,AMap.Geolocation,AMap.MarkerCluster,AMap.Geocoder"></script><style>.fantastic-admin-home {
-                position: absolute;
-                z-index: 10000;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                user-select: none;
-                color: #736477;
-                background-color: snow;
-            }
-            .fantastic-admin-home .loading {
-                position: relative;
-                display: inline-block;
-                width: 1em;
-                height: 1em;
-                color: inherit;
-                vertical-align: middle;
-                pointer-events: none;
-                transform: scale(3);
-            }
-            .fantastic-admin-home .loading::before,
-            .fantastic-admin-home .loading::after {
-                content: "";
-                display: block;
-                position: absolute;
-                background-color: currentColor;
-                left: 50%;
-                right: 0;
-                top: 0;
-                bottom: 50%;
-                box-shadow: -0.5em 0 0 currentColor;
-                animation: loading 1s linear infinite;
-            }
-            .fantastic-admin-home .loading::after {
-                top: 50%;
-                bottom: 0;
-                animation-delay: 0.25s;
-            }
-            @keyframes loading {
-                0%,
-                100% {
-                    box-shadow: -0.5em 0 0 transparent;
-                    background-color: currentColor;
-                }
-                50% {
-                    box-shadow: -0.5em 0 0 currentColor;
-                    background-color: transparent;
-                }
-            }
-            .fantastic-admin-home .text {
-                font-size: 24px;
-                margin-top: 50px;
-            }</style><link href="css/assetManagement.cb851598.css" rel="prefetch"><link href="css/assetManagement~map~systemManage.5d8dd882.css" rel="prefetch"><link href="css/chunk-74d75422.39898831.css" rel="prefetch"><link href="css/chunk-c5b48452.a091ad04.css" rel="prefetch"><link href="css/chunk-f7dcd68a.f5ae7af6.css" rel="prefetch"><link href="css/dataStatistics.63281126.css" rel="prefetch"><link href="css/keySite.93cbb347.css" rel="prefetch"><link href="css/maintenanceService.73a31241.css" rel="prefetch"><link href="css/map.dc4c2c3a.css" rel="prefetch"><link href="css/systemManage.e9b2cb90.css" rel="prefetch"><link href="css/workReport.7c1105cf.css" rel="prefetch"><link href="js/assetManagement.b1467900.js" rel="prefetch"><link href="js/assetManagement~map~systemManage.cdcf3fe3.js" rel="prefetch"><link href="js/breadcrumb_example.737e6029.js" rel="prefetch"><link href="js/chunk-2d0b59f4.ea4111b7.js" rel="prefetch"><link href="js/chunk-2d0b68f8.39a42dfb.js" rel="prefetch"><link href="js/chunk-2d0c7e72.59601a4c.js" rel="prefetch"><link href="js/chunk-2d216214.6e4d41ab.js" rel="prefetch"><link href="js/chunk-35c6b192.4619d38d.js" rel="prefetch"><link href="js/chunk-74d75422.b82671eb.js" rel="prefetch"><link href="js/chunk-c5b48452.9b139ca8.js" rel="prefetch"><link href="js/chunk-f7dcd68a.314ae1c6.js" rel="prefetch"><link href="js/dataStatistics.c2b6e5db.js" rel="prefetch"><link href="js/keySite.4bdf8e3e.js" rel="prefetch"><link href="js/maintenanceService.6f142344.js" rel="prefetch"><link href="js/map.31a9c927.js" rel="prefetch"><link href="js/multilevel_menu_example.f9313646.js" rel="prefetch"><link href="js/serviceWorkOrder.20e496b4.js" rel="prefetch"><link href="js/systemManage.b64e7447.js" rel="prefetch"><link href="js/vendors~assetManagement~map~systemManage~workReport.7bdb25fa.js" rel="prefetch"><link href="js/vendors~dataStatistics~workReport.e577a232.js" rel="prefetch"><link href="js/vendors~workReport.9d23786c.js" rel="prefetch"><link href="js/workReport.583d0bbf.js" rel="prefetch"><link href="css/app.50ecebbb.css" rel="preload" as="style"><link href="js/app.fef771a2.js" rel="preload" as="script"><link href="css/app.50ecebbb.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but 资源管理系统 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div class="fantastic-admin-home"><div class="loading"></div><div class="text">资源管理系统载入中…</div></div></div><script src="js/app.fef771a2.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0"
+    />
+    <title>小张的个人博客</title>
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="keywords" content="Vue3、前后端分离、个人博客网站" />
+    <meta
+      name="description"
+      content="一款基于Vue3、element-plus开发的个人博客网站，用于记录自己的前端学习、生活等"
+    />
+    <style>
+      body {
+        background-color: #fafafa;
+      }
+
+      .app-spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        height: 40px;
+        width: 40px;
+        transform: translate(-50%, -50%);
+      }
+
+      .ball {
+        position: absolute;
+        display: block;
+        left: 30px;
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        transition: all 0.5s;
+        animation: circleRotate 4s both infinite;
+        transform-origin: 0 250% 0;
+      }
+
+      @keyframes circleRotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(1440deg);
+        }
+      }
+
+      .ball-1 {
+        z-index: -1;
+        background-color: #2196f3;
+        animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
+      }
+
+      .ball-2 {
+        z-index: -2;
+        background-color: #03a9f4;
+        animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);
+      }
+
+      .ball-3 {
+        z-index: -3;
+        background-color: #00bcd4;
+        animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);
+      }
+
+      .ball-4 {
+        z-index: -4;
+        background-color: #009688;
+        animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);
+      }
+
+      .ball-5 {
+        z-index: -5;
+        background-color: #4caf50;
+        animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);
+      }
+
+      .ball-6 {
+        z-index: -6;
+        background-color: #8bc34a;
+        animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);
+      }
+
+      .ball-7 {
+        z-index: -7;
+        background-color: #cddc39;
+        animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);
+      }
+
+      .ball-8 {
+        z-index: -8;
+        background-color: #ffeb3b;
+        animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);
+      }
+
+      .loading-box {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loading-text {
+        text-wrap: nowrap;
+        color: #676767;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    </style>
+    <script type="module" crossorigin src="./static/js/index-138841c6.js"></script>
+    <link rel="stylesheet" href="./static/css/index-7cf81354.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <noscript>
+        <strong
+          >We're sorry but browser doesn't work properly without JavaScript enabled. Please enable
+          it to continue.</strong
+        >
+      </noscript>
+      <div class="app-spinner">
+        <span class="ball ball-1"></span>
+        <span class="ball ball-2"></span>
+        <span class="ball ball-3"></span>
+        <span class="ball ball-4"></span>
+        <span class="ball ball-5"></span>
+        <span class="ball ball-6"></span>
+        <span class="ball ball-7"></span>
+        <span class="ball ball-8"></span>
+        <div class="loading-box">
+          <div class="loading-text">努力加载中...</div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
