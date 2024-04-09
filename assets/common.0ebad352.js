@@ -1,1 +1,0 @@
-const t=()=>(o,l)=>{const d=new FileReader;d.readAsDataURL(o),d.onload=n=>{let e=document.createElement("a");e.download=l,e.style.display="none";let a=d.result;e.href=a,document.body.appendChild(e),e.click(),document.body.removeChild(e)}};export{t as u};

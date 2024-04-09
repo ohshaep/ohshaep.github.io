@@ -1,1 +1,0 @@
-import{z as o,o as c,c as t,N as s,O as a,f as _}from"./index.192c8708.js";const d={},n=e=>(s("data-v-4e7c7e8a"),e=e(),a(),e),p={style:{width:"200px",height:"200px"}},i=n(()=>_("div",null,"2222",-1)),r=[i];function h(e,f){return c(),t("div",p,r)}const m=o(d,[["render",h],["__scopeId","data-v-4e7c7e8a"]]);export{m as default};
