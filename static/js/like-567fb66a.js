@@ -1,1 +1,0 @@
-import{a1 as n}from"./index-138841c6.js";const a=e=>new Promise((t,r)=>{n.post("/api/like/addLike",e).then(i=>{t(i)})}),o=e=>new Promise((t,r)=>{n.post("/api/like/getIsLikeByIdAndType",e).then(i=>{t(i)})}),c=e=>new Promise((t,r)=>{n.post("/api/like/cancelLike",e).then(i=>{t(i)})});export{a,c,o as g};
