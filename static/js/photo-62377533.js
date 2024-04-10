@@ -1,0 +1,1 @@
+import{a1 as l}from"./index-8cb36933.js";const m=()=>new Promise((t,e)=>{l.get("/api/photoAlbum/getAllAlbumList",{}).then(o=>{t(o)})}),A=t=>new Promise((e,o)=>{l.get(`/api/photo/getAllPhotosByAlbumId/${t}`,{}).then(r=>{e(r)})});export{A as a,m as g};
