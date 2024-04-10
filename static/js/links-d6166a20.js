@@ -1,1 +1,0 @@
-import{a1 as s}from"./index-9c00c9ce.js";const a=e=>new Promise((t,r)=>{s.post("/api/links/getLinksList",e).then(n=>{t(n)})}),o=e=>new Promise((t,r)=>{s.post("/api/links/add",e).then(n=>{t(n)})}),p=e=>new Promise((t,r)=>{s.post("/api/links/frontUpdate",e).then(n=>{t(n)})});export{o as a,a as g,p as u};
