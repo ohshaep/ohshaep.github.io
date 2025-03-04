@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'HarmonyOS_SansSC_Bold';
+    font-weight: bold;
+    font-style: normal;
+    src: url("../font/harmonyos/HARMONYOS_SANS_SC_BOLD.TTF") format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmonyOS_SansSC_Medium';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/harmonyos/HARMONYOS_SANS_SC_MEDIUM.TTF') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmonyOS_SansSC_Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/harmonyos/HARMONYOS_SANS_SC_REGULAR.TTF') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HARMONYOS_SansSC_LIGHT';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/harmonyos/HARMONYOS_SANS_SC_LIGHT.TTF') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'pangmengzhengdao';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../font/庞门正道标题体.TTF') format('woff2');
+    font-display: swap;
+}

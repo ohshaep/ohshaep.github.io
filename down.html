@@ -1,0 +1,182 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="renderer" content="webkit" />
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <!-- 本页单独样式 -->
+    <link rel="stylesheet" href="static/css/down.css" />
+    <!-- 本页单独样式end -->
+    <link href="./static/css/layui.css" rel="stylesheet">
+    <script src="static/js/jQuery.js"></script>
+  </head>
+  <body>
+    <header class="com-header"></header>
+    <script>
+      $(function () {
+        $('.com-header').load('component/header.html'); //加载导航栏
+      });
+      document.querySelector('.com-header').style.position = 'sticky'; //顶部粘贴
+      document.querySelector('.com-header').style.background = 'rgb(255, 255, 255)'; //顶部颜色
+    </script>
+    <main class="down">
+      <section class="down-s1">
+        <div class="w1400">
+            <div class="product-s1-content-nav product-list-nav">
+                <div class="product-s1-content-nav-icon">
+                  <img src="static/images/other/product-s1-icon1.png" alt="ctmon">
+                </div>
+                <a href="index.html" class="product-s1-content-nav-link">Home</a>
+                <div class="product-s1-content-nav-link-img">&gt;</div>
+                <a href="support.html" class="product-s1-content-nav-link">Products</a>
+                <div class="product-s1-content-nav-link-img">&gt;</div>
+                <a href="accessories.html" class="product-s1-content-nav-link"> Download Resources</a>
+              </div>
+        </div>
+        <div class="down-s1-container w1400">
+          <div class="down-s1-content">
+            <h1 class="down-s1-title">Download Resources</h1>
+            <p class="down-s1-subtitle">Meet Your Needs</p>
+           <div class="down-s1-btn1">
+               <div class="layui-form">
+                  <select lay-filter="demo-select-filter">
+                    <option value="" class="down-s1-select">Filling machine</option>
+                    <option value="AAA"><a href="#">选项A</a></option>
+                    <option value="BBB"><a href="#">选项B</a></option>
+                    <option value="CCC"><a href="#">选项C</a></option>
+                  </select>
+                </div>
+              <div class="down-s1-serch">
+                <input type="text" placeholder="Search Keywords..." />
+                <div class="down-s1-serch-btn"><img src="static/images/other/down-serch.png" alt="ctmon" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <div class="com-nav">
+        <div class="com-nav-container w1400">
+          <div class="com-nav-list">
+            <span>
+              <a href="home.html">SERVICE</a>
+            </span>
+            <span>-</span>
+            <span>
+              <a href="faq.html">Files Download</a>
+            </span>
+          </div>
+        </div>
+      </div> -->
+      <section class="down-s2">
+        <div class="down-s2-container w1600">
+          <div class="down-s2-content">
+            <a href="#" class="down-s2-item">
+              <div class="down-s2-item-img">
+                <img src="static/images/other/down-s2-file-img.png" alt="ctmon" />
+              </div>
+              <div class="down-s2-item-file-name">User Manua</div>
+              <div class="down-s2-item-file-msg">
+                <div class="down-s2-item-file-msg-left">Click to download</div>
+                <div class="down-s2-item-file-msg-right">2024-07-24</div>
+              </div>
+            </a>
+            <a href="#" class="down-s2-item">
+              <div class="down-s2-item-img">
+                <img src="static/images/other/down-s2-file-img.png" alt="ctmon" />
+              </div>
+              <div class="down-s2-item-file-name">User Manua</div>
+              <div class="down-s2-item-file-msg">
+                <div class="down-s2-item-file-msg-left">Click to download</div>
+                <div class="down-s2-item-file-msg-right">2024-07-24</div>
+              </div>
+            </a>
+            <a href="#" class="down-s2-item">
+              <div class="down-s2-item-img">
+                <img src="static/images/other/down-s2-file-img.png" alt="ctmon" />
+              </div>
+              <div class="down-s2-item-file-name">Catalog</div>
+              <div class="down-s2-item-file-msg">
+                <div class="down-s2-item-file-msg-left">Click to download</div>
+                <div class="down-s2-item-file-msg-right">2024-07-24</div>
+              </div>
+            </a>
+            <a href="#" class="down-s2-item">
+              <div class="down-s2-item-img">
+                <img src="static/images/other/down-s2-file-img.png" alt="ctmon" />
+              </div>
+              <div class="down-s2-item-file-name">Manual</div>
+              <div class="down-s2-item-file-msg">
+                <div class="down-s2-item-file-msg-left">Click to download</div>
+                <div class="down-s2-item-file-msg-right">2024-07-24</div>
+              </div>
+            </a>
+            <a href="#" class="down-s2-item">
+              <div class="down-s2-item-img">
+                <img src="static/images/other/down-s2-file-img.png" alt="ctmon" />
+              </div>
+              <div class="down-s2-item-file-name">Catalog</div>
+              <div class="down-s2-item-file-msg">
+                <div class="down-s2-item-file-msg-left">Click to download</div>
+                <div class="down-s2-item-file-msg-right">2024-07-24</div>
+              </div>
+            </a>
+            <a href="#" class="down-s2-item">
+              <div class="down-s2-item-img">
+                <img src="static/images/other/down-s2-file-img.png" alt="ctmon" />
+              </div>
+              <div class="down-s2-item-file-name">Manual</div>
+              <div class="down-s2-item-file-msg">
+                <div class="down-s2-item-file-msg-left">Click to download</div>
+                <div class="down-s2-item-file-msg-right">2024-07-24</div>
+              </div>
+            </a>
+            <a href="#" class="down-s2-item">
+              <div class="down-s2-item-img">
+                <img src="static/images/other/down-s2-file-img.png" alt="ctmon" />
+              </div>
+              <div class="down-s2-item-file-name">User Manua</div>
+              <div class="down-s2-item-file-msg">
+                <div class="down-s2-item-file-msg-left">Click to download</div>
+                <div class="down-s2-item-file-msg-right">2024-07-24</div>
+              </div>
+            </a>
+            <a href="#" class="down-s2-item">
+              <div class="down-s2-item-img">
+                <img src="static/images/other/down-s2-file-img.png" alt="ctmon" />
+              </div>
+              <div class="down-s2-item-file-name">Catalog</div>
+              <div class="down-s2-item-file-msg">
+                <div class="down-s2-item-file-msg-left">Click to download</div>
+                <div class="down-s2-item-file-msg-right">2024-07-24</div>
+              </div>
+            </a>
+          </div>
+          <div class="product-s1-page down-btn w1400">
+            <a href="" class="product-s1-page-item">&lt;</a>
+            <a href="" class="product-s1-page-item active">1</a>
+            <a href="" class="product-s1-page-item">2</a>
+            <a href="" class="product-s1-page-item">3</a>
+            <a href="" class="product-s1-page-item">4</a>
+            <a href="" class="product-s1-page-item">&gt;</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="com-footer">
+      <script>
+        $(function () {
+          $('.com-footer').load('component/footer.html'); //加载页脚
+        });
+      </script>
+    </footer>
+    <script src="static/js/jquery.counterup.js"></script>
+    <script src="static/js/swiper-bundle.min.js"></script>
+    <script src="static/js/wow.js"></script>
+    <script src="static/js/gsap.min.js"></script>
+    <script src="static/js/ScrollTrigger.min.js"></script>
+    <script src="static/js/form.js"></script>
+    <script src="./static/js/public.js"></script>
+    <script src="//unpkg.com/layui@2.9.22/dist/layui.js"></script> 
+  </body>
+</html>

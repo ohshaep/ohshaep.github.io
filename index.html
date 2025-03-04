@@ -1,147 +1,1138 @@
-<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="renderer" content="webkit" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0"
-    />
-    <title>小张的个人博客</title>
-    <link rel="icon" href="./favicon.ico" />
-    <meta name="keywords" content="Vue3、前后端分离、个人博客网站" />
-    <meta
-      name="description"
-      content="一款基于Vue3、element-plus开发的个人博客网站，用于记录自己的前端学习、生活等"
-    />
-    <style>
-      body {
-        background-color: #fafafa;
-      }
 
-      .app-spinner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 1;
-        height: 40px;
-        width: 40px;
-        transform: translate(-50%, -50%);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+  <meta name="renderer" content="webkit" />
+  <title>Document</title>
+  <link rel="stylesheet" href="static/css/sweiper.min.css">
+  <link rel="stylesheet" href="static/css/animate.min.css">
+  <link rel="stylesheet" href="static/css/style.css" />
+  <link rel="stylesheet" href="static/css/public.css" />
+  <!-- 本页单独样式 -->
+  <link rel="stylesheet" href="static/css/index.css" />
+  <!-- 本页单独样式end -->
+  <script src="static/js/jQuery.js"></script>
+</head>
 
-      .ball {
-        position: absolute;
-        display: block;
-        left: 30px;
-        width: 12px;
-        height: 12px;
-        border-radius: 6px;
-        transition: all 0.5s;
-        animation: circleRotate 4s both infinite;
-        transform-origin: 0 250% 0;
-      }
+<body>
+  <header class="com-header"></header>
+  <script>
+    $(function () {
+      $('.com-header').load('component/header.html'); //加载导航栏s
+    });
+    // document.querySelector('.com-header').style.position = 'sticky';
+  </script>
+  <main>
+    <section class="index-s1">
+      <div class="index-s1-bg"><img src="static/images/index/s1-banner.png" alt="ctmon"></div>
+      <div class=" w1400">
+        <div class="index-s1-content">
+          <div class="index-s1-content-left">
+            <div class="index-s1-content-left-title">
+              <p class="index-s1-title-one">
+                Longwill- Vape Filling and Capping
+              </p>
+              <div class="index-s1-title-one-bgc1">
+                <p class="index-s1-title-one index-s1-title-one0">
+                  Machine Manufacturer
+                </p>
+                <div class="index-s1-title-one0-bgc">
+                  <img src="static/images/index/s1-banner-bgc.png" alt="ctmon">
+                </div>
+              </div>
+              <p class="index-s1-title-two">
+                Longwill specializes in high-precision vape filling and capping machines. <br class="com-br">
+                Our goal is to reduce your labor costs, enhance production efficiency and meet your unique <br
+                  class="com-br">
+                customization needs - empowering your business with reliable, scalable, and future-ready solutions. <br
+                  class="com-br">
 
-      @keyframes circleRotate {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(1440deg);
-        }
-      }
-
-      .ball-1 {
-        z-index: -1;
-        background-color: #2196f3;
-        animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
-      }
-
-      .ball-2 {
-        z-index: -2;
-        background-color: #03a9f4;
-        animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);
-      }
-
-      .ball-3 {
-        z-index: -3;
-        background-color: #00bcd4;
-        animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);
-      }
-
-      .ball-4 {
-        z-index: -4;
-        background-color: #009688;
-        animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);
-      }
-
-      .ball-5 {
-        z-index: -5;
-        background-color: #4caf50;
-        animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);
-      }
-
-      .ball-6 {
-        z-index: -6;
-        background-color: #8bc34a;
-        animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);
-      }
-
-      .ball-7 {
-        z-index: -7;
-        background-color: #cddc39;
-        animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);
-      }
-
-      .ball-8 {
-        z-index: -8;
-        background-color: #ffeb3b;
-        animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);
-      }
-
-      .loading-box {
-        margin-top: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .loading-text {
-        text-wrap: nowrap;
-        color: #676767;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 600;
-      }
-    </style>
-    <script type="module" crossorigin src="./static/js/index-8cb36933.js"></script>
-    <link rel="stylesheet" href="./static/css/index-7cf81354.css">
-  </head>
-
-  <body>
-    <div id="app">
-      <noscript>
-        <strong
-          >We're sorry but browser doesn't work properly without JavaScript enabled. Please enable
-          it to continue.</strong
-        >
-      </noscript>
-      <div class="app-spinner">
-        <span class="ball ball-1"></span>
-        <span class="ball ball-2"></span>
-        <span class="ball ball-3"></span>
-        <span class="ball ball-4"></span>
-        <span class="ball ball-5"></span>
-        <span class="ball ball-6"></span>
-        <span class="ball ball-7"></span>
-        <span class="ball ball-8"></span>
-        <div class="loading-box">
-          <div class="loading-text">努力加载中...</div>
+              </p>
+              <div class="index-s1-title-three-bgc1">
+                <div class="index-s1-title-three-image">
+                  <img src="static/images/index/s1-3.png" alt="ctmon">
+                </div>
+                <p class="index-s1-title-three">
+                  Fast. Precise. Profitable.
+                </p>
+              </div>
+              <button class="index-s1-title-four uh wpx-btn pop">
+                Quote Now !
+              </button>
+            </div>
+          </div>
+          <div class="index-s1-content-right">
+            <div class="index-s1-content-right-img">
+              <img src="static/images/index/s1-4.png" alt="ctmon">
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+    <section class="index-s2">
+      <div class="index-s2-title">
+        <p>Main Product Series</p>
+      </div>
+      <div class="swiper-index-2">
+        <div class="swiper-wrapper  index-s2-content">
+          <div class=" swiper-slide swiper-index-imgindex-img">
+            <div class=" index-s2-content-img">
+              <img src="static/images/index/s2-3.png" alt="ctmon">
+              <div class="index-s2-content-yi2">Fully - Automatic Vape Filling</div>
+              <div class="bottom-top-content cv">
+                <div class="title-text">
+                  <p class="title-text-one">Fully - Automatic Vape Filling</p>
+                  <p class="title-text-two">
+                    Our fully automatic cartridge and device filling machine is de-
+                    signed for all liquid types, especially vape juice and cannabis
+                    oil. Equipped with an advanced temperature control system, it
+                    ensures precise filling for liquids of varying viscosities. Made
+                    from medical-grade stainless steel and tubing, it combines du-
+                    rability and hygiene. This automated system reduces labor
+                    costs and minimizes human error, offering an efficient filling solution.
+                  </p>
+                  <button class="title-text-three uh wpx-btn pop">
+                    Discover more
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=" swiper-slide swiper-index-imgindex-img">
+            <div class=" index-s2-content-img">
+              <img src="static/images/index/s2-2.png" alt="ctmon">
+              <div class="index-s2-content-yi2">Semi - Automatic Vape Filling</div>
+              <div class="bottom-top-content cv">
+                <div class="title-text">
+                  <p class="title-text-one">Semi - Automatic Vape Filling</p>
+                  <p class="title-text-two">
+                    Our fully automatic cartridge and device filling machine is de-
+                    signed for all liquid types, especially vape juice and cannabis
+                    oil. Equipped with an advanced temperature control system, it
+                    ensures precise filling for liquids of varying viscosities. Made
+                    from medical-grade stainless steel and tubing, it combines du-
+                    rability and hygiene. This automated system reduces labor
+                    costs and minimizes human error, offering an efficient filling solution.
+                  </p>
+                  <button class="title-text-three uh wpx-btn pop">
+                    Discover more
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=" swiper-slide swiper-index-imgindex-img">
+            <div class=" index-s2-content-img index-s2-content-img2">
+              <img src="static/images/index/s2-3.png" alt="ctmon">
+              <div class="index-s2-content-yi2">Fully - Automatic Vape Capping</div>
+              <div class="bottom-top-content cv">
+                <div class="title-text">
+                  <p class="title-text-one">Fully - Automatic Vape Filling</p>
+                  <p class="title-text-two">
+                    Our fully automatic cartridge and device filling machine is de-
+                    signed for all liquid types, especially vape juice and cannabis
+                    oil. Equipped with an advanced temperature control system, it
+                    ensures precise filling for liquids of varying viscosities. Made
+                    from medical-grade stainless steel and tubing, it combines du-
+                    rability and hygiene. This automated system reduces labor
+                    costs and minimizes human error, offering an efficient filling solution.
+                  </p>
+                  <button class="title-text-three uh wpx-btn pop">
+                    Discover more
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+    <section class="index-s3">
+      <div class="index-s2-title">
+        <p>Main Product Series</p>
+      </div>
+      <div class="w1400">
+        <div class="yxxc1 flexlf flexace fadeInUp  wow animated" style="visibility: visible; animation-name: fadeInUp;">
+          <div class="fd">
+            <img class="fd-img" src="static/images/index/s3-1.png" alt="ctmon">
+          </div>
+          <div class="fd des">
+            <p class="index-s3-content-text-one">
+              Fully - Automatic Cartidge and
+              <span class="index-s3-content-text-one sp"> Device Filling Machine
+
+              </span>
+            </p>
+            <p class="index-s3-content-text-two">
+              Delivers fast and precise cartridge filling. Made with medical-grade
+              stainless steel tubing, which ensures durability and hygiene. Its innovative
+              oil flow design minimizes liquid waste and enhances ease of cleaning,
+              making it an efficient and reliable solution for your production needs.
+            </p>
+            <div class="index-s3-content-text-three index-s3-content-text-three-two">
+              <div class="index3-1">
+                <div class="index-s3-imge">
+                  <img src="static/images/index/s3-2.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Temperature Control System </p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-3.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Medical-Grade Materials </p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-4.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Ease of Cleaning</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-5.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">New Oil flow design</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-6.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Touchscreen Design</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-7.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one">Compatible with Most Cartridge Styles</p>
+              </div>
+              <div class="index3-1">
+              </div>
+            </div>
+            <div class="index-s3-content-text-four">
+              <button class="index-s3-content-text-four-one active wpx-btn pop">
+                Discover More
+              </button>
+              <a href="fully-filling.html" class="index-s3-content-text-four-two wpx-btn">
+                Any Questions
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="yxxc1 flexlf flexace fadeInUp  wow animated" style="visibility: visible; animation-name: fadeInUp;">
+          <div class="fd des">
+            <p class="index-s3-content-text-one">
+              Fully - Automatic Cartidge and
+              <span class="index-s3-content-text-one sp"> Device Filling Machine
+
+              </span>
+            </p>
+            <p class="index-s3-content-text-two">
+              After simple parameter adjustments — just press a button to achieve a secure,
+              consistent seal. Its constant pressure mechanism ensures precision capping,
+              eliminating inconsistencies caused by manual sealing.
+            </p>
+            <div class="index-s3-content-text-three-two ">
+              <div class="index3-1">
+                <div class="index-s3-imge">
+                  <img src="static/images/index/s3-16.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">High-Precision Motor</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-13.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Constant Pressure</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-17.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Sealed Environment</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-14.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Touchscreen Design</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-18.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Physical Emergency Stop Button</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-15.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">1-Year Warranty</p>
+              </div>
+              <div class="index3-1">
+              </div>
+            </div>
+            <div class="index-s3-content-text-four">
+              <button class="index-s3-content-text-four-one active wpx-btn pop">
+                Discover More
+              </button>
+              <a href="fully-capping.html" class="index-s3-content-text-four-two wpx-btn">
+                Any Questions
+              </a>
+            </div>
+          </div>
+          <div class="fd">
+            <img class="fd-img" src="static/images/index/s3-0.png" alt="ctmon">
+          </div>
+        </div>
+        <div class="yxxc1 flexlf flexace fadeInUp  wow animated" style="visibility: visible; animation-name: fadeInUp;">
+          <div class="fd">
+            <img class="fd-img" src="static/images/index/s2-4.png" alt="ctmon">
+          </div>
+          <div class="fd des">
+            <p class="index-s3-content-text-one">
+              Fully - Automatic Cartidge and
+              <span class="index-s3-content-text-one sp"> Device Filling Machine
+              </span>
+            </p>
+            <p class="index-s3-content-text-two">
+              After simple parameter adjustments — just press a button to achieve a secure,
+              consistent seal. Its constant pressure mechanism ensures precision capping,
+              eliminating inconsistencies caused by manual sealing.
+            </p>
+            <div class="index-s3-content-text-three index-s3-content-text-three-two">
+              <div class="index3-1">
+                <div class="index-s3-imge">
+                  <img src="static/images/index/s3-2.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">High-Precision Motor</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-3.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one "> Constant Pressure </p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-4.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Sealed Environment</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-5.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one "> Touchscreen Design</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-6.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one ">Physical Emergency Stop Button</p>
+              </div>
+              <div class="index3-1">
+                <div>
+                  <img src="static/images/index/s3-7.png" alt="ctmon">
+                </div>
+                <p class="index-s3-content-text-three-one"> 1-Year Warranty</p>
+              </div>
+              <div class="index3-1">
+              </div>
+            </div>
+            <div class="index-s3-content-text-four">
+              <button class="index-s3-content-text-four-one active wpx-btn pop">
+                Discover More
+              </button>
+              <a href="fully-filling.html" class="index-s3-content-text-four-two wpx-btn">
+                Any Questions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="index-s4">
+      <div class="index-s4-bgc">
+        <img src="static/images/index/s4-1.png" alt="ctmon">
+
+        <div class="index-s4-content">
+          <p class="index-s3-content-text-one">
+            Our Services
+          </p>
+          <div class="index-s3-content-text-two">
+            <p> At Longwill, we offer more than just filling and capping machine solutions. </p>
+            <p> We provide comprehensive OEM/ODM services tailored to your needs, </p>
+            <p>outstanding after-sales support, and fast delivery to ensure your business runs smoothly and efficiently.
+            </p>
+
+
+
+          </div>
+          <div class="index-s3-content-text-four">
+            <button class="index-s3-content-text-four-one cf wpx-btn pop">
+              <div class="index-s3-content-text-four-one-text">
+                Get more services
+              </div>
+              <div class="index-s3-content-text-four-one-image">
+                <img src="./static/images/index/s4-2.png" alt="ctmon">
+              </div>
+            </button>
+          </div>
+        </div>
+    </section>
+    <section class="index-s5">
+      <div class="swiper-index-1 w1400">
+        <div class="swiper-wrapper index-s5-content">
+          <div class="swiper-slide swiper-index-imgindex-img index-s5-content-one">
+            <div class="index-s5-content-one-imge">
+              <img src="./static/images/index/s5-1.png" alt="ctmon">
+            </div>
+            <div class="index-s5-content-one-title">
+              <div class="index-s5-content-one-text">
+                <img src="static/images/index/s5-2.png" alt="ctmon">
+                <p class="index-s3-content-text-one">
+                  OEM & ODM
+                </p>
+              </div>
+              <p class="index-s3-content-text-two">
+                Our skilled engineering, sales, and production teams provide you with
+                flexible customization options to transform your specific requirements
+                into reality
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-index-imgindex-img index-s5-content-one">
+            <div class="index-s5-content-one-imge">
+              <img src="./static/images/index/s5-3.png" alt="ctmon">
+            </div>
+            <div class="index-s5-content-one-title">
+              <div class="index-s5-content-one-text">
+                <img src="static/images/index/s5-4.png" alt="ctmon">
+                <p class="index-s3-content-text-one">
+                  Quality Assurance
+                </p>
+              </div>
+              <p class="index-s3-content-text-two">
+                All we products have passed CE RoHS FDA certification, From produc-
+                tion to shipment, it has been inspected layer by layer, meeting the
+                high standards of the local market.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide swiper-index-imgindex-img index-s5-content-one">
+            <div class="index-s5-content-one-imge">
+              <img src="./static/images/index/s5-5.png" alt="ctmon">
+            </div>
+            <div class="index-s5-content-one-title">
+              <div class="index-s5-content-one-text">
+                <img src="static/images/index/s5-6.png" alt="ctmon">
+                <p class="index-s3-content-text-one">
+                  Fast Delivery
+                </p>
+              </div>
+              <p class="index-s3-content-text-two">
+                We use historical data and market trends to forecast demand to plan
+                production and inventory; So machines can be shipped in 48 hours;
+                Customized machine can be ready in 5 - 7 working days.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-index-imgindex-img index-s5-content-one">
+            <div class="index-s5-content-one-imge">
+              <img src="./static/images/index/s5-8.png" alt="ctmon">
+            </div>
+            <div class="index-s5-content-one-title">
+              <div class="index-s5-content-one-text">
+                <img src="static/images/index/s5-9.png" alt="ctmon">
+                <p class="index-s3-content-text-one">
+                  Outstanding Support
+                </p>
+              </div>
+              <p class="index-s3-content-text-two">
+                Excellent Pre-sale, in-sale and after-sale servcie, including expert
+                advice, trobleshot issues, and offer solutions to customer's unique re-
+                quirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+    <section class="index-s6">
+      <div class="index-s6-title">
+        <div class="index-s6-title-text">
+          <div class="index-s6-title-text-layout">
+            <p class="index-s6-title-text-one">About <span class="index-6-yellow">Longwill</span></p>
+            <p class="index-s6-title-text-two">
+              Longwill Technology is a reliable company. We focused on providing
+              high-quality cartridge filling machines, capping machines, pre-roll ma-
+              chines, dab dispenser machines, pre-roll infusion machines and more since
+              2014.
+
+            </p>
+            <p class="index-s6-title-text-three">
+              Our team of highly skilled professionals is dedicated to delivering excep-
+              tional products and services that exceed our clients’ expectations. Led by
+              James, our Chief Engineer, who has over 20 years of experience in the ma-
+              chinery industry. we are committed to providing innovative and efficient fill-
+              ing and capping solutions to clients worldwide.
+
+            </p>
+            <a href="about-us.html" class="index-s6-title-btn wpx-btn">
+              About us
+            </a>
+          </div>
+        </div>
+        <div class="index-s6-title-imge">
+          <div class="index-s6-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="index-s6-item">
+                  <img src="./static/images/index/s6-1.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item">
+                  <img src="./static/images/index/s6-1.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item">
+                  <img src="./static/images/index/s6-1.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item">
+                  <img src="./static/images/index/s6-1.png" alt="ctmon">
+                </div>
+              </div>
+              <!-- 重复的slide -->
+              <div class="swiper-slide">
+                <div class="index-s6-item">
+                  <img src="./static/images/index/s6-1.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item">
+                  <img src="./static/images/index/s6-1.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item">
+                  <img src="./static/images/index/s6-1.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item">
+                  <img src="./static/images/index/s6-1.png" alt="ctmon">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
+            <div class="swiper-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
+          </div>
+          <div class="index-s6-swiper-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="index-s6-item-thumb">
+                  <img src="./static/images/index/s6-2.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item-thumb">
+                  <img src="./static/images/index/s6-3.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item-thumb">
+                  <img src="./static/images/index/s6-4.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item-thumb">
+                  <img src="./static/images/index/s6-5.png" alt="ctmon">
+                </div>
+              </div>
+              <!-- 重复的slide -->
+              <div class="swiper-slide">
+                <div class="index-s6-item-thumb">
+                  <img src="./static/images/index/s6-2.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item-thumb">
+                  <img src="./static/images/index/s6-3.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item-thumb">
+                  <img src="./static/images/index/s6-4.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s6-item-thumb">
+                  <img src="./static/images/index/s6-5.png" alt="ctmon">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="index-s6-title-img-shang">
+            <img src="./static/images/index/s6-1.png" alt="ctmon">
+          </div>
+          <div class="index-s6-title-img-xia">
+            <img src="./static/images/index/s6-2.png" alt="ctmon">
+            <img src="./static/images/index/s6-3.png" alt="ctmon">
+            <img src="./static/images/index/s6-4.png" alt="ctmon">
+            <img src="./static/images/index/s6-5.png" alt="ctmon">
+          </div> -->
+        </div>
+      </div>
+      <div class="index-s6-title index-s6-title-thrid">
+        <div class="index-s6-title-imge">
+          <div class="index-s6-title-img-shang">
+            <img src="./static/images/index/s7-1.png" alt="ctmon">
+          </div>
+        </div>
+        <div class="index-s6-title-text index-s6-title-text-thrid">
+          <p class="index-s6-title-text-one">Our Mission</p>
+          <p class="index-s6-title-text-two">
+            At Longwill, our mission is to provide innovative, efficient,and high-quality
+            solutions for CBD vape oil filling, capping,packaging, and related services.
+          </p>
+          <p class="index-s6-title-text-three">
+            Our core values—Efficiency and Precision, Saving you More. This is the heart
+            of everything we do. Both our sales team and R&D experts prioritize these
+            principles, driving us to empower businesses to thrive in an ever-evolving,
+            competitive market.
+          </p>
+          <a href="contact.html" class="index-s6-title-btn wpx-btn">
+            Contact US
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <section class="index-s7">
+      <div class="w1400">
+        <div class="index-s7-content">
+          <div class="index-s7-title">
+            <p class="index-s7-title-text-one">
+              Certifications and Honors
+            <div class="index-s7-title-img">
+              <img src="static/images/index/s8-1.png" alt="ctmon">
+            </div>
+            </p>
+          </div>
+          <p class="index-s7-title-text-two">
+            All machines have passed CE and FCC certifications, allowing them to be sold in most countries worldwide.
+            Additionally, the silicone tubing has passed the LFGB <br>
+            test in Germany, the pumps and oil barrels have passed the FDA test in the United States, and all materials
+            in contact with the oil are safe.
+          </p>
+        </div>
+        <div class="swiper-index">
+          <div class="swiper-wrapper swiper-wrapper-ph">
+            <div class="swiper-index-imgindex-img"></div>
+            <div class="swiper-index-imgindex-img"></div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-2.png" src="static/images/index/s8-2.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-3.png" src="static/images/index/s8-3.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-index-imgindex-img"></div>
+            <div class="swiper-index-imgindex-img"></div>
+            <div class="swiper-index-imgindex-img"></div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-4.png" src="static/images/index/s8-4.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-4.png" src="static/images/index/s8-4.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-5.png" src="static/images/index/s8-5.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-6.png" src="static/images/index/s8-6.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-index-imgindex-img"></div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-7.png" src="static/images/index/s8-7.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-8.png" src="static/images/index/s8-8.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-9.png" src="static/images/index/s8-9.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-10.png" src="static/images/index/s8-10.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-11.png" src="static/images/index/s8-11.png"
+                alt="ctmon">
+            </div>
+            <div class="swiper-slide swiper-index-imgindex-img">
+              <img class="img-pop-btn" img-data="static/images/index/s8-12.png" src="static/images/index/s8-12.png"
+                alt="ctmon">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="index-s8">
+      <div class="index-s8-content">
+        <div class="index-s8-content-one">
+          <div class="index-s8-content-title">
+            <p>Successful Cooperations</p>
+          </div>
+          <div class="index-s8-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-1.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-2.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-3.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-4.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-5.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-6.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-5.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-6.png" alt="ctmon">
+                </div>
+              </div>
+              <!-- 重复的 -->
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-1.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-2.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-3.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-4.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-5.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-6.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-5.png" alt="ctmon">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="index-s8-img">
+                  <img src="static/images/index/s9-6.png" alt="ctmon">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-s8-content-two">
+          <div class="index-s8-content-two-title">
+            <p>
+              Feedback from <span class="index-s8-yellow">Customers</span>
+            </p>
+          </div>
+          <div class="index-s8-content-two-title-line w1400">
+            <div class="index-s8-content-two-title-line-one">
+              <div class="index-s8-content-two-title-line-one-shang">
+                <div class="index-s8-content-shang-image">
+                  <img src="static/images/index/s9-7.png" alt="ctmon">
+                </div>
+                <div class="index-s8-content-shang-title">
+                  <div class="index-s8-content-shang-title-itrou">
+                    <div class="index-s8-content-shang-title-icon">
+                      <img src="static/images/index/s9-8.png" alt="ctmon">
+                    </div>
+                    <p class="index-s8-content-shang-title-name">David Lee</p>
+                  </div>
+                  <div class="index-s8-content-shang-title-image">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                  </div>
+                </div>
+              </div>
+              <div class="index-s8-content-two-title-line-one-center">
+                <p>— Production Manager</p>
+              </div>
+              <div class="index-s8-content-two-title-line-one-xia">
+                <p>
+                  "The filling machine we purchased has drastically im- <br class="
+                  com-br">
+                  proved our production efficiency. Its speed and precision
+                  are unmatched, saving us both time and material costs.
+                  Coupled with fast delivery and excellent after-sales ser-
+                  vice, your team has been a true partner in our success!"
+                </p>
+              </div>
+            </div>
+            <div class="index-s8-content-two-title-line-one">
+              <div class="index-s8-content-two-title-line-one-shang">
+                <div class="index-s8-content-shang-image">
+                  <img src="static/images/index/s9-7.png" alt="ctmon">
+                </div>
+                <div class="index-s8-content-shang-title">
+                  <div class="index-s8-content-shang-title-itrou">
+                    <div class="index-s8-content-shang-title-icon">
+                      <img src="static/images/index/s9-8.png" alt="ctmon">
+                    </div>
+                    <p class="index-s8-content-shang-title-name">David Lee</p>
+                  </div>
+                  <div class="index-s8-content-shang-title-image">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                  </div>
+                </div>
+              </div>
+              <div class="index-s8-content-two-title-line-one-center">
+                <p>— Operations Director</p>
+              </div>
+              <div class="index-s8-content-two-title-line-one-xia">
+                <p>
+                  "Your capping machine has been a game-changer for our operations. The reliability and accuracy of the
+                  equipment ensure every product meets our high-quality standards. The cost savings and seamless
+                  integration into our workflow make it one of the best investments we've ever made."
+
+                </p>
+              </div>
+            </div>
+            <div class="index-s8-content-two-title-line-one">
+              <div class="index-s8-content-two-title-line-one-shang">
+                <div class="index-s8-content-shang-image">
+                  <img src="static/images/index/s9-7.png" alt="ctmon">
+                </div>
+                <div class="index-s8-content-shang-title">
+                  <div class="index-s8-content-shang-title-itrou">
+                    <div class="index-s8-content-shang-title-icon">
+                      <img src="static/images/index/s9-8.png" alt="ctmon">
+                    </div>
+                    <p class="index-s8-content-shang-title-name">David Lee</p>
+                  </div>
+                  <div class="index-s8-content-shang-title-image">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                    <img src="static/images/index/s9-9.png" alt="ctmon">
+                  </div>
+                </div>
+              </div>
+              <div class="index-s8-content-two-title-line-one-center">
+                <p>— Plant Manager</p>
+              </div>
+              <div class="index-s8-content-two-title-line-one-xia">
+                <p>
+                  "From the moment we placed the order, the entire process was smooth and efficient. The filling and
+                  capping machines were delivered quickly, and they exceeded our expectations in terms of speed,
+                  reliability, and ease of use. Your after-sales team was incredibly supportive—highly recommended!"
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="index-s8-content-two-title-line-two w1400">
+            <div class="index-s8-content-two-title-line-two-vido">
+              <div class="index-s8-content-two-title-line-two-vido-img">
+                <img class="video-pop-btn" video-data="static/images/index/s9-10.png"
+                  src="static/images/index/s9-10.png" alt="ctmon">
+              </div>
+              <div class="index-s8-content-two-title-line-two-vido-img">
+                <img class="video-pop-btn" video-data="static/images/index/s9-10.png"
+                  src="static/images/index/s9-10.png" alt="ctmon">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-s8-content-three">
+
+        </div>
+      </div>
+
+    </section>
+    <section class="index-s9">
+      <div class="index-s9-bgc">
+        <img class="index-s9-bg" src="static/images/index/s10-1.png" alt="ctmon">
+        <div class="index-s9-bgc-text">
+          <div class="w1400">
+            <p class="index-s9-bgc-text-one">Let's Build Your Product</p>
+            <p class="index-s9-bgc-text-two">
+              Unlock the Full Potential of Your Product Development Partner with our expert team at Longwill Equipment
+              to
+              bring your ideas to life.
+              Fill out the form below, and let's take the first step together in turning your vision into reality. <br
+                class="com-br">
+            </p>
+            <button class="index-s9-bgc-text-three wpx-btn pop">
+              Get more services
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="index-s10">
+      <div class="index-10-cation w1400">News</div>
+      <div class="index-s10-content w1400">
+        <div class="index-s10-content-left">
+          <div class="index-s10-content-left-img">
+            <img src="static/images/index/s11-4.png" alt="ctmon">
+          </div>
+          <div class="index-s10-content-left-text">
+            <p class="index-s10-content-left-text-one index-s10-content-left-text-one-2">
+              Top 10 Cannabis Oil Filling Machine Suppliers in the USA!
+            </p>
+            <div class="index-s10-content-left-text-two">
+              <div class="index-s10-content-left-text-two-img">
+                <img src="static/images/index/s11-2.png" alt="ctmon">
+              </div>
+              <p class="index-s10-content-left-text-two">
+                2024-08-26 /// No Comments
+              </p>
+            </div>
+            <p class="index-s10-content-left-text-three fg">
+              In the rapidly evolving cannabis industry, precision and eff-
+              iciency in product packaging are paramount.
+              The demand for high-guality cannabis oil filling machines...
+            </p>
+            <div class="index-s10-content-left-text-four wpx-btn">
+             <a href="new-list.html" class="wpx-btn"> Read More</a>
+            <!-- <p> Read More</p> -->
+            </div>
+          </div>
+        </div>
+        <!-- <div class="swiper-index-3"> -->
+        <!-- swiper-wrapper -->
+        <div class=" index-s10-content-right">
+          <div class=" index-s10-content-right-one">
+            <div class="index-s10-content-right-one-text">
+              <p class="index-s10-content-left-text-one">
+                Top 10 Cannabis Oil Filling Machine Suppliers in the USA!
+              </p>
+              <div class="index-s10-content-left-text-two">
+                <div class="index-s10-content-left-text-two-img">
+                  <img src="static/images/index/s11-2.png" alt="ctmon">
+                </div>
+                <p class="index-s10-content-left-text-two">
+                  2024-08-26 /// No Comments
+                </p>
+              </div>
+              <p class="index-s10-content-left-text-three">
+                In the rapidly evolving cannabis industry, precision and eff-
+                iciency in product packaging are paramount.
+                The demand for high-guality cannabis oil filling machines...
+              </p>
+            </div>
+            <div class="index-s10-content-right-one-img">
+              <img src="static/images/index/s11-3.png" alt="ctmon">
+            </div>
+          </div>
+          <div class=" index-s10-content-right-one">
+            <div class="index-s10-content-right-one-text">
+              <p class="index-s10-content-left-text-one">
+
+                Questions Answered Everything You Need to Know About
+                Pre-Rolled Cone Filling Machines Your Questions Answered
+              </p>
+              <div class="index-s10-content-left-text-two">
+                <div class="index-s10-content-left-text-two-img">
+                  <img src="static/images/index/s11-2.png" alt="ctmon">
+                </div>
+                <p class="index-s10-content-left-text-two">
+                  2024-08-26 /// No Comments
+                </p>
+              </div>
+              <p class="index-s10-content-left-text-three">
+                As the cannabis industry continues to expand, the demand for
+                efficient and reliable packaging solutions...
+              </p>
+            </div>
+            <div class="index-s10-content-right-one-img">
+              <img src="static/images/index/s11-4.png" alt="ctmon">
+            </div>
+          </div>
+          <div class=" index-s10-content-right-one">
+            <div class="index-s10-content-right-one-text">
+              <p class="index-s10-content-left-text-one">
+                Top 10 Filling Machine Cartridge Manufacturers in Canada
+                for the Cannabis Industry
+              </p>
+              <div class="index-s10-content-left-text-two">
+                <div class="index-s10-content-left-text-two-img">
+                  <img src="static/images/index/s11-2.png" alt="ctmon">
+                </div>
+                <p class="index-s10-content-left-text-two">
+                  2024-08-26 /// No Comments
+                </p>
+              </div>
+              <p class="index-s10-content-left-text-three">
+                Canada's cannabis industry has rapidly grown since the legal-
+                ization of recreational marijuana in 2018 ...
+              </p>
+            </div>
+            <div class="index-s10-content-right-one-img">
+              <img src="static/images/index/s11-5.png" alt="ctmon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="index-s11">
+      <div class="W1400">
+        <div class="index-s11-content">
+
+          <!-- <div class="index-s1-content-bgc-1"><img class="index-s11-bg" src="./static/images/index/s12-1.png" alt="ctmon"></div> -->
+          <div class="index-s11-content-title">
+            <div class="contact-s4-1 wow fadeInUp" style="visibility: visible;">
+              <div class="line-leave"></div>
+              <form>
+                <div class="leave-word">
+                  <div class="li_box">
+                    <div class="texts">Name</div>
+
+                    <input type="text" placeholder="* Please enter">
+                  </div>
+
+                  <div class="li_box">
+                    <div class="texts">Email</div>
+
+                    <input type="text" placeholder="* Please enter">
+                  </div>
+
+                  <div class="li_box">
+                    <div class="texts">Telephone</div>
+
+                    <input type="text" placeholder="* Please enter">
+                  </div>
+
+                  <div class="li_box">
+                    <div class="texts">Country</div>
+
+                    <input type="text" placeholder="* Please enter">
+                  </div>
+
+                  <div class="li_box">
+                    <div class="texts">Your Message</div>
+
+                    <input type="text" placeholder="* Please enter">
+                  </div>
+                </div>
+                <div class="leave-btns">
+                  <button type="submit" class="leave-btn wpx-btn">Submit Now</button>
+                  <div class="pop"><img src="static/images/index/s12-2.png" alt=""></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="index-s1-content-bgc-1"><img class="index-s11-bg" src="./static/images/index/s12-1.png"
+              alt="ctmon"></div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <!-- 图片+视频弹窗 -->
+  <div class="com-pop-video">
+    <div class="com-pop-video-box">
+      <div class="com-pop-content">
+        <video class="pop-video" src="static/video/1.mp4" controls="controls" autoplay="autoplay" muted="muted"
+          loop="loop"></video>
+        <img class="pop-img" src="static/img/1.jpg" alt="ctmon" />
+      </div>
     </div>
-    
-  </body>
+    <div class="close-pop-btn">X</div>
+  </div>
+  <!-- 图片+视频弹窗 -->
+
+  <footer class="com-footer">
+    <script>
+      $(function () {
+        $('.com-footer').load('component/footer.html'); //加载页脚
+      });
+
+
+
+    </script>
+  </footer>
+  <script>
+  </script>
+  <script src="static/js/layui.js"></script>
+  <script src="static/js/jquery.counterup.js"></script>
+  <script src="static/js/swiper-bundle.min.js"></script>
+  <script src="static/js/wow.js"></script>
+  <script src="static/js/gsap.min.js"></script>
+  <script src="static/js/ScrollTrigger.min.js"></script>
+  <script src="static/js/form.js"></script>
+  <script src="static/js/public.js" defer></script>
+</body>
+
 </html>
