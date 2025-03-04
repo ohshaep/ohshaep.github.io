@@ -1,0 +1,92 @@
+<div class="footer w5">
+  <div class="footer-top">
+    <div class="footer-top-left">
+      <div class="footer-top-left-content">
+        <div class="footer-top-left-logo">
+          <img src="static/img/common/en-logo.png" alt="ctmon" />
+        </div>
+        <div class="footer-top-left-text">
+          <ul>
+            <li><a href="index-en.html">Home</a></li>
+            <li><a href="product-en.html">Product</a></li>
+            <li><a href="hire-en.html">Careers</a></li>
+            <li><a href="contact-en.html">About Us</a></li>
+            <li><a id="lang-en" class="launguage" href="index-en.html">中文</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-top-right">
+      <div class="footer-top-right-content">
+        <a class="footer-top-right-img">
+          <img src="static/img/common/wechat.png" alt="qr-code" />
+          <div class="footer-top-right-qr-img">
+            <img src="static/img/index/index-s1-qr-en.png" alt="ctmon" />
+          </div>
+        </a>
+        <a target="_blank" href="https://space.bilibili.com/1077677154" class="footer-top-right-img">
+          <img src="static/img/common/bilibili.png" alt="ctmon" />
+        </a>
+        <a
+          target="_blank"
+          href="https://www.douyin.com/user/MS4wLjABAAAAAcfipSlaUYyM673pSK5eGTC9j2S1P5yzqlrVSaGLjN4coXjFqV8inh4i4HVDsoqK "
+          class="footer-top-right-img"
+        >
+          <img src="static/img/common/tiktok.png" alt="ctmon" />
+        </a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCDjnC6m9_xW-PDeDCjv-jng" class="footer-top-right-img">
+          <img src="static/img/common/youtoub.png" alt="ctmon" />
+        </a>
+        <a target="_blank" href="https://x.com/Astribot_Inc?mx=2" class="footer-top-right-img">
+          <img src="static/img/common/twiter.png" alt="ctmon" />
+        </a>
+        <!-- <a target="_blank" href="https://dwz.cn/xsVrQejm" class="footer-top-right-img">
+          <img src="static/img/common/facebook.png" alt="ctmon" />
+        </a> -->
+        <a
+          target="_blank"
+          href="https://www.tiktok.com/@astribot_inc?is_from_webapp=1&sender_device=pc"
+          class="footer-top-right-img"
+        >
+          <img src="static/img/common/tiktok.png" alt="ctmon" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <a class="footer-bottom-link" href="javascript:void(0)">Copyright © Astribot. All Rights Reserved.</a>
+    <!-- <a
+      class="footer-bottom-link"
+      href="
+    
+    
+    
+    
+    :void(0)"
+      >技术支持：CTMON</a
+    > -->
+  </div>
+</div>
+
+<script>
+  const footer_lang = document.getElementById('lang-en'); // 语言切换
+  footer_lang.addEventListener('click', function (e) {
+    e.preventDefault();
+    let currentURL = window.location.href;
+    let lastPart = currentURL
+      .split('/')
+      .filter((part) => part !== '')
+      .pop();
+    window.location.href = lastPart.replace('-en.html', '.html');
+  });
+
+  if (document.querySelector('#lang-en')) {
+    document.querySelectorAll('.launguage').forEach((item) => {
+      item.innerText = '中文';
+    });
+  } else {
+    document.querySelectorAll('.launguage').forEach((item) => {
+      item.innerText = 'EN';
+    });
+  }
+</script>
